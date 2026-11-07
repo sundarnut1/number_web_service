@@ -1,7 +1,7 @@
 # number_web_service
 Simple Docker deployed API on AWS ECS that can accept numbers and convert them to text. First shot for 1 to 10.
 
-1. Run docker images locally to see list of all the images present locally in Docker Desktop
+1. First, run **docker images** locally to see list of all the images present locally in Docker Desktop.
 2. Execute **docker build -t number-web-service-v00 .** to create a local Docker image that has this web service.
 3. -t lists a tag but since we did not provide any tags, it automatically suffixes :latest to the image name.
 4. **docker run -p 5001:5001 -e APP_API_KEY=password1 number-web-service-v00** will execute this for client calls
