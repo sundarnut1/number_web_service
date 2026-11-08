@@ -1,0 +1,32 @@
+{
+  "family": "number-web-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::437849718702:role/ecsTaskExecutionRole",
+  "runtimePlatform": {
+    "cpuArchitecture": "ARM64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "containerDefinitions": [
+    {
+      "name": "number-web",
+      "image": "437849718702.dkr.ecr.us-east-1.amazonaws.com/number-web-service:latest",
+      "portMappings": [
+        {
+          "containerPort": 5001,
+          "hostPort": 5001,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "APP_API_KEY",
+          "value": "560016"
+        }
+      ],
+      "essential": true
+    }
+  ]
+}
