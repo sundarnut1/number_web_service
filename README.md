@@ -13,11 +13,11 @@ Simple Docker deployed API on AWS ECS that can accept numbers and convert them t
      -H "X-API-Key: password1" \\  
      -d '{"number": 10}'**
 9. You should see this output:
-**HTTP/1.1 200 OK
-Server: gunicorn
-Date: Sat, 07 Nov 2026 22:11:01 GMT
-Connection: close
-Content-Type: application/json
-Content-Length: 34
-
+**HTTP/1.1 200 OK  
+Server: gunicorn  
+Date: Sat, 07 Nov 2026 22:11:01 GMT  
+Connection: close  
+Content-Type: application/json  
+Content-Length: 34  
+  
 {"converted":"ten","original":10}**
